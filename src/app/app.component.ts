@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'RecipesApp';
-  clickedButton = false;
+  loadedFeature = 'recipe';
 
-  receiveBoolean(isRecipesClicked: boolean) {
-    this.clickedButton = isRecipesClicked;
-    console.log(this.clickedButton);
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }
